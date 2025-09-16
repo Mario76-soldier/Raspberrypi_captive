@@ -1,0 +1,4 @@
+interface={{interface}}
+address=/#/{{ip}}
+bind-interfaces
+listen-address={{ip}}

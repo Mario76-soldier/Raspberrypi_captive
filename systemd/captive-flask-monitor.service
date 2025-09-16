@@ -1,0 +1,12 @@
+[Unit]
+Description=Captive Flask Monitor
+After=network.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/captive-flask-monitor.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+ssid=
+password=
+device_id=id
+device_location=location
+device_admin=name

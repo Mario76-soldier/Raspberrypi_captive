@@ -105,7 +105,7 @@ echo "[COPY] captive-flask-monitor.service → /etc/systemd/system/"
 
 # systemd 리로드 및 활성화
 sudo systemctl daemon-reload
-sudo systemctl enable captive-flask.service
+sudo systemctl disable captive-flask.service
 sudo systemctl enable captive-flask-monitor.service
 sudo systemctl start captive-flask-monitor.service
 

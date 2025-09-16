@@ -1,0 +1,3 @@
+interface {{interface}}
+static ip_address={{static_ip}}
+nohook wpa_supplicant

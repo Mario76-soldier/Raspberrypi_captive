@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, render_template
-import os, subprocess, threading, sys, time
+import os, subprocess, threading, time
 
 CONFIG_FILE="config.txt"
 
@@ -127,4 +127,6 @@ def complete():
     return render_template('complete.html', WIFI_STATUS=wifi_status)
 
 if __name__ == "__main__":
+    cmd = ["nmcli", "connection", "up", "captive"]
+    result = subprocess.run(cmd, capture_output=True, text=True, check=True)
     app.run(host="0.0.0.0", port=80)

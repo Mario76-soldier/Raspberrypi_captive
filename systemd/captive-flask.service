@@ -1,0 +1,13 @@
+[Unit]
+Description=Captive Flask App
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 ${BASE_DIR}/captive.py
+Restart=always
+User=root
+WorkingDirectory=${BASE_DIR}
+Environment=FLASK_ENV=production
+
+[Install]
+WantedBy=multi-user.target
